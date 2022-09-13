@@ -3,7 +3,7 @@ name: Release
 on:
   workflow_run:
     workflows: ["Prebuild rubies"]
-    # branches: [main]
+    branches: [main]
     types:
       - completed
 
@@ -25,7 +25,7 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
-          prerelease: false
+          prerelease: true
           title: "${{ env.CURRENT_DATETIME }}"
           files: |
             versions.tar.xz
