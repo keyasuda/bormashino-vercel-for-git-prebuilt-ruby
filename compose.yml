@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  builder:
+    command: "sh -c /build.sh"
+    image: amazonlinux:2.0.20191217.0
+    volumes:
+      - type: bind
+        source: "./"
+        target: "/output"
+      - type: bind
+        source: "./build.sh"
+        target: "/build.sh"
+      - type: bind
+        source: "./build-ruby.sh"
+        target: "/build-ruby.sh"
