@@ -13,3 +13,4 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 
 rbenv install 3.2.0-preview1
 rbenv install 3.2.0-preview2
+rbenv install 3.2.0
